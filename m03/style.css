@@ -1,3 +1,10 @@
+@font-face {
+   font-family: 'DancingScriptRegular';
+   src: url('https://fontlibrary.org:443/en/face/dancing');
+   font-weight: normal;
+   font-style: normal;
+}
+
 body {
   font-family: Helvetica, Arial, sans-serif;
   color: #665544;
