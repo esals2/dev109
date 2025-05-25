@@ -2,48 +2,43 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <meta name="description" content="Assignment 3 - Rhombus Generator" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Custom Rhombus Drawer</title>
+  <title>Rhombus Generator</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <h1>Custom Rhombus Drawer</h1>
-  <p>Created by [Your Name]</p>
+  <h1>Rhombus Generator</h1>
+  <h3>Created by [Your Name]</h3>
 
-  <form id="rhombusForm">
-    <label for="height">Section Height (1–20):</label>
-    <input type="number" id="height" name="height" min="1" max="20" required />
+  <label>What is the height of the Rhombus? (odd number only)</label><br />
+  <input type="number" id="rHeight" min="1" max="100" step="2" required /><br />
 
-    <label for="oddColor">Color for Odd Positions:</label>
-    <select id="oddColor" required>
-      <option value="red">Red</option>
-      <option value="blue">Blue</option>
-      <option value="green">Green</option>
-      <option value="orange">Orange</option>
-    </select>
+  <label>Choose color for Even positions:</label><br />
+  <select id="colorEven">
+    <option value="#0000FF">Blue</option>
+    <option value="#FF0000">Red</option>
+    <option value="#FF9900">Orange</option>
+  </select><br />
 
-    <label for="evenColor">Color for Even Positions:</label>
-    <select id="evenColor" required>
-      <option value="yellow">Yellow</option>
-      <option value="purple">Purple</option>
-      <option value="teal">Teal</option>
-      <option value="black">Black</option>
-    </select>
+  <label>Choose color for Odd positions:</label><br />
+  <select id="colorOdd">
+    <option value="#FF0099">Pink</option>
+    <option value="#33FF00">Green</option>
+    <option value="#660099">Purple</option>
+  </select><br />
 
-    <label for="symbol">Symbol:</label>
-    <select id="symbol" required>
-      <option value="*">*</option>
-      <option value="^">^</option>
-      <option value="%">%</option>
-      <option value="+">+</option>
-    </select>
+  <label>Choose symbol for Rhombus:</label><br />
+  <select id="symbol">
+    <option value="*">*</option>
+    <option value="$">$</option>
+    <option value="@">@</option>
+  </select><br /><br />
 
-    <button type="submit">Draw Rhombus</button>
-  </form>
+  <button onclick="drawRhombus()">Display Rhombus</button>
 
-  <pre id="output"></pre>
+  <div id="rhombusOutput" class="output-section"></div>
 
   <script src="drawRhombus.js"></script>
 </body>
 </html>
-
