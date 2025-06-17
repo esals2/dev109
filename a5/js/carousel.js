@@ -1,6 +1,4 @@
-// carousel js implementation by Franklin
-
-// function that deals w all of the carousel logic
+// function that deals with all of the carousel logic
 function carousel() {
   let container = null;
   let images = [];
@@ -48,11 +46,11 @@ function carousel() {
   // show image for whatever input index, by removing all active states and readding active onto the new image index
   function showImage(index) {
     slides.forEach((slide) => {
-        slides.classList.remove("active");
+      slide.classList.remove("active");
     });
 
     if (slides[index]) {
-        slides[index].classList.add("active");
+      slides[index].classList.add("active");
     }
 
     currentIndex = index;
