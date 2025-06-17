@@ -56,7 +56,7 @@
 /* arrow button styling, consistent fixed positioning to appear under carousel images */
 .carousel-arrow {
   position: absolute;
-  bottom: 30px;
+  bottom: 15px;
   background-color: rgba(0, 0, 0, 0.5);
   color: white;
   border: none;
@@ -74,11 +74,11 @@
 
 /* left and right arrows have different x positions */
 .carousel-arrow-left {
-  left: 200px;
+  left: 50px;
 }
 
 .carousel-arrow-right {
-  right: 200px;
+  right: 50px;
 }
 
 /* carousel timer styling */
