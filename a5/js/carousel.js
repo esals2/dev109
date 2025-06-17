@@ -5,7 +5,6 @@ function carousel() {
   let leftArrow = null;
   let rightArrow = null;
   let currentIndex = 0;
-  let autoScrollInterval = null;
   let countdownInterval = null;
   let countdown = 4;
   let timerDisplay = null;
@@ -67,16 +66,24 @@ function carousel() {
     showImage(prevIndex);
   }
 
+  function updateTimerDisplay() {
+    if (timerDisplay) {
+      timerDisplay.textContent = `${countdown}s`;
+    }
+  }
+
   // starting the auto scroll with interval which triggers every 3000ms (3s)
   function startAutoScroll() {
     pauseAutoScroll();
+    countdown = 3;
     updateTimerDisplay();
+        
     countdownInterval = setInterval(() => {
         countdown--;
         updateTimerDisplay();
         if (countdown < 0) {
             nextImage();
-            countdown = 4;
+            countdown = 3;
         }
     }, 1000);
   }
@@ -91,6 +98,12 @@ function carousel() {
         clearInterval(countdownInterval);
         countdownInterval = null;
     }
+  }
+
+  // Resets timer logic on interaction with button
+  function resetAutoScroll() {
+    pauseAutoScroll();
+    startAutoScroll();
   }
 }
 
