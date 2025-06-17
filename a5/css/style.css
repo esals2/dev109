@@ -1,6 +1,6 @@
 /* carousel container --- carousel uses absolute positioning so that all the images can be in the dom at the same time */
 .carousel-container {
-  height: 600px;
+  height: 650px;
   width: 450px;
   position: relative;
   border-radius: 8px;
@@ -56,7 +56,7 @@
 /* arrow button styling, consistent fixed positioning to appear under carousel images */
 .carousel-arrow {
   position: absolute;
-  bottom: 15px;
+  bottom: -10px;
   background-color: rgba(0, 0, 0, 0.5);
   color: white;
   border: none;
@@ -74,11 +74,11 @@
 
 /* left and right arrows have different x positions */
 .carousel-arrow-left {
-  left: 50px;
+  left: 10px;
 }
 
 .carousel-arrow-right {
-  right: 50px;
+  right: 10px;
 }
 
 /* carousel timer styling */
