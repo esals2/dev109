@@ -1,7 +1,7 @@
 /* carousel container --- carousel uses absolute positioning so that all the images can be in the dom at the same time */
 .carousel-container {
   height: 600px;
-  width: 100%;
+  width: 450px;
   position: relative;
   border-radius: 8px;
   margin-left: auto;
@@ -15,7 +15,7 @@
   top: 0;
   left: 0;
   height: 600px;
-  width: 100%;
+  width: 450px;
   object-fit: cover;
   position: absolute;
   z-index: 5;
@@ -27,7 +27,7 @@
   top: 0;
   left: 0;
   height: 600px;
-  width: 100%;
+  width: 450px;
   opacity: 0;
   transition: opacity 0.5s ease-in-out;
 }
@@ -42,7 +42,7 @@
   position: absolute;
   bottom: 20px;
   left: 0;
-  width: 100%;
+  width: 450px;
   text-align: center;
   color: white;
   background-color: rgba(0, 0, 0, 0.4);
@@ -74,11 +74,11 @@
 
 /* left and right arrows have different x positions */
 .carousel-arrow-left {
-  left: 15px;
+  left: 300px;
 }
 
 .carousel-arrow-right {
-  right: 15px;
+  right: 300px;
 }
 
 /* carousel timer styling */
