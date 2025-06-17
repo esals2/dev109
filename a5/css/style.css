@@ -1,0 +1,98 @@
+/* carousel container --- carousel uses absolute positioning so that all the images can be in the dom at the same time */
+.carousel-container {
+  height: 600px;
+  width: 100%;
+  position: relative;
+  border-radius: 8px;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  z-index: 1;
+}
+
+/* absolute positioning for images and setting width/height to match its parent. also hidden by default with opacity: 0 */
+.carousel-image {
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+/* style captions and images in a slide */
+.carousel-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.carousel-slide.active {
+  opacity: 1;
+  z-index: 2; /* so it's above inactive slides */
+}
+
+/* caption styling, appears under the images but above buttons */
+.carousel-caption {
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 12px 0;
+  font-size: 1.1rem;
+  font-weight: 500;
+  z-index: 5;
+  border-radius: 0 0 8px 8px;
+}
+
+/* if active, set opacity to 1 to have it be shown */
+.carousel-image.active {
+  opacity: 1;
+}
+
+/* arrow button styling, consistent fixed positioning to appear under carousel images */
+.carousel-arrow {
+  position: absolute;
+  bottom: 20px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  font-size: 16px;
+  padding: 10px 15px;
+  cursor: pointer;
+  z-index: 10;
+  transition: background-color 0.3s ease;
+  border-radius: 3px;
+}
+
+.carousel-arrow:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* left and right arrows have different x positions */
+.carousel-arrow-left {
+  left: 15px;
+}
+
+.carousel-arrow-right {
+  right: 15px;
+}
+
+/* carousel timer styling */
+.carousel-timer {
+  position: absolute;
+  top: 10px;
+  left: 15px;
+  color: white;
+  font-weight: bold;
+  z-index: 20;
+}
+
