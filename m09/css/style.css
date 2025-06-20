@@ -65,10 +65,15 @@ li {
 	padding-top: 10px;}
 
 /* Edit Slack image */
+.image-wrapper {
+  display: flex;
+  justify-content: center;   
+  align-items: center;       
+}
+
 img {
   max-width: 50%;
   height: auto;
-  justify-content: center;
 }
 
 .hot {
