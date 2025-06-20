@@ -20,6 +20,7 @@ function insertListItem(item, targetSelector = '#todo') {
 document.querySelector('form').addEventListener('submit', function (e) {
   e.preventDefault();                                        // Prevent form from refreshing the page
   const input = document.getElementById('new-item');         // Get the input box
+  const newItemText = input.value.trim();                    // Get the input text and trim spaces
 
   if (newItemText !== '') {
     const newItem = createListItem(newItemText);             // Create li element from input
