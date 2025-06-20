@@ -5,7 +5,7 @@ function isValid() {
     return true;
     else
         document.getElementById("submiterror").innerHTML = "<p><strong>Error Submitting — See Above</strong></p>";
-        event.preventDefault();
+        Event.preventDefault();
         return false;
 }
 
@@ -36,4 +36,3 @@ function firstName(){
     //5) return status of each field
     return (validFirstname);
 };
-
